@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AYSQO | About</title>
+
+  <link rel="stylesheet" href="./main.css" />
+  <link rel="icon" type="image/png" href="./images/favicon.png" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Ensure it appears directly below the parent item */
+    left: 50%; /* Center the dropdown relative to the parent */
+    transform: translateX(-50%); /* Adjust for perfect centering */
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    z-index: 10;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    padding: 10px 0; /* Add vertical padding */
+}
+
+/* Style dropdown items with spacing */
+.dropdown-menu li {
+    list-style: none;
+    padding: 10px 20px; /* Space between each option */
+    text-align: center;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show dropdown when hovering over the "Solutions" menu item */
+.is-nav-item:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        width: 100%; /* Make it full width for mobile */
+        text-align: center;
+    }
+}
+  </style>
+</head>
+<body>
+    
+    <nav class="is-nav-container">
+        <div class="is-nav-header">
+            <div class="is-nav-logo">
+                <img src="./images/client_logo-removebg-preview.png" alt="Info Services" class="is-nav-logo-img">
+                <!-- <span class="is-nav-logo-text">Info Services</span>
+                <span class="is-nav-slogan">Innovate-IT Services 2016</span> -->
+            </div>
+            <div class="is-nav-badges">
+                <span class="is-nav-badge">Top-Tier Software Solution Provider</span>
+                <span class="is-nav-badge">Certified Company ISO 9001-2021</span>
+            </div>
+        </div> <hr>
+        <ul class="is-nav-menu">
+            <li class="is-nav-item"><a href="./index.html" class="is-nav-link">HOME</a></li>
+            <li class="is-nav-item"><a href="./about.html" class="is-nav-link">ABOUT</a></li>
+            <li class="is-nav-item"><a href="./services.html" class="is-nav-link">SERVICES</a></li>
+            <li class="is-nav-item"><a href="./solution.html" class="is-nav-link">SOLUTIONS</a></li>
+            <li class="is-nav-item"><a href="./technologies.html" class="is-nav-link">TECHNOLOGIES</a></li>
+            <li class="is-nav-item dropdown">
+                <a href="./carrers.html" class="is-nav-link">CAREERS</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">IT Jobs</a></li>
+                    <li><a href="#">NON_IT Jobs</a></li>
+                    <li><a href="#">Internship</a></li>
+                </ul>
+            </li>
+            <li class="is-nav-item"><a href="./contact.html" class="is-nav-link">CONTACT US</a></li>
+            <li class="is-nav-item"><a href="./contact.html" class="is-nav-link">CSR</a></li>
+            
+        </ul>
+        <div class="is-nav-toggle">
+            <span class="is-nav-toggle-bar"></span>
+            <span class="is-nav-toggle-bar"></span>
+            <span class="is-nav-toggle-bar"></span>
+        </div>
+    </nav>
+
+
+    <div class="header">
+        <h1>Careers</h1>
+        <div class="breadcrumb">
+            <a href="#">Home</a> <span>></span> <a href="#">Careers</a>
+        </div>
+    </div>
+
+
+
+    <form style="background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 600px; margin: auto;">
+        <h4 style="text-align:center; margin-bottom: 20px;">Job Application</h4>
+      
+        <label>Full Name *</label>
+        <input type="text" name="name" required style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" />
+      
+        <label>Email *</label>
+        <input type="email" name="email" required style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" />
+      
+        <label>Phone *</label>
+        <input type="text" name="phone" required style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" />
+      
+        <label>Experience *</label>
+        <select name="experience" required style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+          <option disabled selected>Select experience</option>
+          <option>0-1 years</option>
+          <option>1-3 years</option>
+          <option>3-5 years</option>
+          <option>5+ years</option>
+        </select>
+      
+        <label>Technologies *</label>
+        <select name="technologies" required style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+          <option disabled selected>Select technology</option>
+          <option>JavaScript</option>
+          <option>Python</option>
+          <option>PHP</option>
+          <option>Java</option>
+          <option>Node.js</option>
+        </select>
+      
+        <label>Resume Link <span style="color: red;">*</span></label>
+        <input type="url" name="resume" required placeholder="Paste your resume link" style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" />
+      
+        <label>Skills <span style="color: red;">*</span></label>
+        <input type="text" name="skills" required placeholder="e.g. React, SQL, Docker" style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" />
+      
+        <label>Additional Message <span style="color: red;">*</span></label>
+        <textarea name="message" rows="4" required style="width: 100%; padding: 8px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Tell us more..."></textarea>
+      
+        <button type="submit" style="width: 100%; padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px;">Submit Application</button>
+      </form>
+      
+
+    <footer class="is-footer-section">
+        <div class="is-footer-container">
+            <div class="is-footer-column">
+                <h3 class="is-footer-title">Company</h3>
+                <p>Your one stop partner for everything design, technology and marketing. Our rich background lies in earning hard experiences in software development working with 100+ clients worldwide.</p>
+            </div>
+            <div class="is-footer-column">
+                <h3 class="is-footer-title">Services</h3>
+                <ul class="is-footer-list">
+                    <li>App Development</li>
+                    <li>Web Development</li>
+                    <li>Digital Marketing</li>
+                    <li>Hardware & Networking</li>
+                    <li>DataScience & Gen AI</li>
+                </ul>
+            </div>
+            <div class="is-footer-column">
+                <h3 class="is-footer-title">Technologies</h3>
+                <ul class="is-footer-list">
+                    <li>Web Technologies</li>
+                    <li>Backend Technologies</li>
+                    <li>Database Technologies</li>
+                    <li>Java Full Stack</li>
+                    <li>Python Full Stack</li>
+                    <li>MERN Tech Stack</li>
+                </ul>
+            </div>
+            <div class="is-footer-column">
+                <h3 class="is-footer-title">Careers</h3>
+                <ul class="is-footer-list">
+                    <li>IT Jobs</li>
+                    <li>Non-IT Jobs</li>
+                    <li>Internship</li>
+                </ul>
+            </div>
+        </div>
+        <div class="is-footer-bottom">
+            <p>Copyright © 2024</p>
+            <ul class="is-footer-links">
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
+

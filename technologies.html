@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AYSQO | About</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="icon" type="image/png"  href="./images/favicon.png">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
+<style>
+   /* Ensure dropdown menu is hidden by default */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Ensure it appears directly below the parent item */
+    left: 50%; /* Center the dropdown relative to the parent */
+    transform: translateX(-50%); /* Adjust for perfect centering */
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    z-index: 10;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    padding: 10px 0; /* Add vertical padding */
+}
+
+/* Style dropdown items with spacing */
+.dropdown-menu li {
+    list-style: none;
+    padding: 10px 20px; /* Space between each option */
+    text-align: center;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show dropdown when hovering over the "Solutions" menu item */
+.is-nav-item:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        width: 100%; /* Make it full width for mobile */
+        text-align: center;
+    }
+}
+
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.filter-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.filter-buttons button:hover {
+    background-color: #0056b3;
+}
+.gallery-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+.gallery-item {
+    display: block; /* Ensure all images are visible initially */
+    width: 250px;
+    text-align: center;
+}
+.gallary-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+.overlay {
+    margin-top: 15px;
+}
+.hidden {
+    display: none !important;
+}
+
+
+.main-wrapper {
+    padding-left: 7%;
+    padding-right: 7%;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+/* Grid container for images */
+.image-gallery {
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px;
+    margin: 0 10px; /* Adds 10px gap on left and right */
+    /* justify-content: center;
+    align-items: center; */
+    
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 80px;
+    padding: 35px 40px; /* More padding left/right */
+    max-width: 1200px;           /* Optional: limit total width */
+    margin: 0 auto  0 6%; /* Center the grid container */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling each gallery box */
+.gallery-item {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 70px;
+    text-align: center;
+    background: #f9f9f9;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.gallery-item:hover {
+    transform: scale(1.05);
+    border-color: #007bff;
+}
+
+/* Styling images */
+.gallery-item img {
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid #ccc;
+}
+
+/* Styling the text under images */
+.gallery-item p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Search Bar Container */
+.search-container {
+    position: relative;
+    width: 80%;
+    margin: 10px auto;
+}
+
+/* Input field */
+.search-container input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 35px; /* Space for icon */
+}
+
+/* Search Icon */
+.search-container i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+    font-size: 16px;
+}
+
+/* Logo Container */
+.logo-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .search-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .search-container {
+        width: 100%;
+    }
+}
+
+
+    
+</style>
+</head>
+<body>
+    
+    <nav class="is-nav-container">
+        <div class="is-nav-header">
+            <div class="is-nav-logo">
+                <img src="./images/client_logo-removebg-preview.png" alt="Info Services" class="is-nav-logo-img">
+                <!-- <span class="is-nav-logo-text">Info Services</span>
+                <span class="is-nav-slogan">Innovate-IT Services 2016</span> -->
+            </div>
+            <div class="is-nav-badges">
+                <span class="is-nav-badge">Top-Tier Software Solution Provider</span>
+                <span class="is-nav-badge">Certified Company ISO 9001-2021</span>
+            </div>
+        </div> <hr>
+        <ul class="is-nav-menu">
+            <li class="is-nav-item"><a href="./index.html" class="is-nav-link">HOME</a></li>
+            <li class="is-nav-item"><a href="./about.html" class="is-nav-link">ABOUT</a></li>
+            <li class="is-nav-item"><a href="./services.html" class="is-nav-link">SERVICES</a></li>
+            <li class="is-nav-item"><a href="./solution.html" class="is-nav-link">SOLUTIONS</a></li>
+            <li class="is-nav-item dropdown">
+                <a href="./technologies.html" class="is-nav-link">TECHNOLOGIES</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Web Technologies</a></li>
+                    <li><a href="#">Backend Technologies</a></li>
+                    <li><a href="#">Database Technologies</a></li>
+                    <li><a href="#">Java Full Stack</a></li>
+                    <li><a href="#">Python Full Stack </a></li>
+                    <li><a href="#">MEREN Tech Stack</a></li>
+                </ul>
+            </li>
+            <li class="is-nav-item"><a href="./carrers.html" class="is-nav-link">CAREERS</a></li>
+            <li class="is-nav-item"><a href="./contact.html" class="is-nav-link">CONTACT US</a></li>
+            <li class="is-nav-item"><a href="./contact.html" class="is-nav-link">CSR</a></li>
+
+        </ul>
+        <div class="is-nav-toggle">
+            <span class="is-nav-toggle-bar"></span>
+            <span class="is-nav-toggle-bar"></span>
+            <span class="is-nav-toggle-bar"></span>
+        </div>
+    </nav>
+
+
+    <div class="header">
+        <h1>Info Services Private Limited Technologies</h1>
+        <div class="breadcrumb">
+            <a href="#">Home</a> <span>></span> <a href="#">High-Performance Technologies!</a>
+        </div>
+    </div>
+
+
+    <div class="filter-buttons">
+        <button onclick="filterBikes('allCases')">AllCases</button>
+        <button onclick="filterBikes('develop')">Web Technologies</button>
+        <button onclick="filterBikes('south')">Backend Technologies</button>
+        <button onclick="filterBikes('north')">Database Technologies</button>
+        <button onclick="filterBikes('east')">Other Technologies</button>
+    </div>
+
+
+    <div class="image-gallery">
+        <div class="gallery-item develop">
+            <img src="./images\icons8-html-96.png" alt="Image 1">
+            <p>HTML</p>
+        </div>
+        <div class="gallery-item develop">
+            <img src="./images\icons8-css-100.png" alt="Image 2">
+            <p>CSS</p>
+        </div>
+        <div class="gallery-item develop">
+            <img src="./images\icons8-javascript-100 (1).png" alt="Image 3">
+            <p>JS</p>
+        </div>
+        <div class="gallery-item develop">
+            <img src="./images\icons8-angularjs-100.png" alt="Image 4">
+            <p>Angular Js</p>
+        </div>
+        <div class="gallery-item develop">
+            <img src="./images\icons8-bootstrap-100.png" alt="Image 5">
+            <p>Bootstrap</p>
+        </div>
+        <div class="gallery-item develop">
+            <img src="./images\icons8-nodejs-100.png" alt="Image 6">
+            <p>Node JS</p>
+        </div>
+        <div class="gallery-item south">
+            <img src="./images\icons8-django-100.png" alt="Image 7">
+            <p>Django</p>
+        </div>
+        <div class="gallery-item south">
+            <img src="./images\icons8-firebase-100.png" alt="Image 8">
+            <p>Firebase</p>
+        </div>
+        <div class="gallery-item south">
+            <img src="./images\icons8-graphql-100.png" alt="Image 9">
+            <p>Graphql</p>
+        </div>
+        <div class="gallery-item north">
+            <img src="./images\icons8-mysql-96.png" alt="Image 10">
+            <p>Mysql</p>
+        </div>
+        <div class="gallery-item north">
+            <img src="./images\icons8-postgresql-100.png" alt="Image 11">
+            <p>Postgresql</p>
+        </div>
+        <div class="gallery-item north">
+            <img src="./images\icons8-nextjs-100.png" alt="Image 12">
+            <p>Next Js</p>
+        </div>
+        <div class="gallery-item east">
+            <img src="./images\icons8-vue-js-100.png" alt="Image 13">
+            <p>JS</p>
+        </div>
+        <div class="gallery-item east">
+            <img src="./images\icons8-ruby-on-rails-100.png" alt="Image 14">
+            <p>Rails</p>
+        </div>
+        <div class="gallery-item east">
+            <img src="./images\icons8-redux-100.png" alt="Image 15">
+            <p>Redux</p>
+        </div>
+        <div class="gallery-item east">
+            <img src="./images\icons8-mongodb-96.png" alt="Image 16">
+            <p>Mongodb</p>
+        </div>
+        <div class="gallery-item east">
+            <img src="./images\icons8-laravel-96.png" alt="Image 17">
+            <p>Laravel</p>
+        </div>
+        <div class="gallery-item east">
+            <img src="./images\icons8-jquery-100.png" alt="Image 18">
+            <p>Jquery</p>
+        </div>
+        <div class="gallery-item east">
+            <img src="./images\icons8-docker-100.png" alt="Image 19">
+            <p>Docker</p>
+        </div>
+        <div class="gallery-item east">
+            <img src="./images\icons8-jquery-100.png" alt="Image 20">
+            <p>Jquery</p>
+        </div>
+    </div>
+
+
+
+    <script>
+        function filterBikes(category) {
+            let allBikes = document.querySelectorAll(".gallery-item");
+
+            allBikes.forEach(bike => {
+                bike.classList.add("hidden"); // Hide all bikes
+
+                if (category === "allCases") {
+                    bike.classList.remove("hidden"); // Show all bikes
+                }else if (category === "develop" && bike.classList.contains("develop")){
+                    bike.classList .remove("hidden");
+                }else if (category === "south" && bike.classList.contains("south")) {
+                    bike.classList.remove("hidden"); // Show South Lakeland bikes
+                } else if (category === "north" && bike.classList.contains("north")) {
+                    bike.classList.remove("hidden"); // Show North Lakeland bikes
+                }else if (category === "east" && bike.classList.contains("east")) {
+                    bike.classList.remove("hidden"); // Show North Lakeland bikes
+                }
+            });
+        }
+    </script>
+
+
+    <footer class="is-footer-section">
+        <div class="is-footer-container">
+            <div class="is-footer-column">
+                <h3 class="is-footer-title">Company</h3>
+                <p>Your one stop partner for everything design, technology and marketing. Our rich background lies in earning hard experiences in software development working with 100+ clients worldwide.</p>
+            </div>
+            <div class="is-footer-column">
+                <h3 class="is-footer-title">Services</h3>
+                <ul class="is-footer-list">
+                    <li>App Development</li>
+                    <li>Web Development</li>
+                    <li>Digital Marketing</li>
+                    <li>Hardware & Networking</li>
+                    <li>DataScience & Gen AI</li>
+                </ul>
+            </div>
+            <div class="is-footer-column">
+                <h3 class="is-footer-title">Technologies</h3>
+                <ul class="is-footer-list">
+                    <li>Web Technologies</li>
+                    <li>Backend Technologies</li>
+                    <li>Database Technologies</li>
+                    <li>Java Full Stack</li>
+                    <li>Python Full Stack</li>
+                    <li>MERN Tech Stack</li>
+                </ul>
+            </div>
+            <div class="is-footer-column">
+                <h3 class="is-footer-title">Careers</h3>
+                <ul class="is-footer-list">
+                    <li>IT Jobs</li>
+                    <li>Non-IT Jobs</li>
+                    <li>Internship</li>
+                </ul>
+            </div>
+        </div>
+        <div class="is-footer-bottom">
+            <p>Copyright © 2024</p>
+            <ul class="is-footer-links">
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
